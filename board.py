@@ -48,3 +48,10 @@ class board():
 
         self.curBoard += result
 
+    # returns board
+    def get_board(self):
+        return self.curBoard
+
+# asdf = board()
+# asdf.new_tiles(7)
+# print(asdf.get_board())
