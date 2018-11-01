@@ -40,7 +40,8 @@ class player:
     def peek_decision(self, given_card):  ## Governs peeking behaviour, returns player number or 0 if it doesn't want to use
         for value in self.knowns.values(): ## Checks if teammate is already known
             if value == True:
-                self.cards.append("peek")
+                if given_card:
+                    self.cards.append("peek")
                 return 0
         to_peek = self.guess
         if not given_card: ## Figures out if it has a peek card stored and if it should be played
@@ -74,9 +75,13 @@ class player:
     def get_swap(self):
         pass
 
-dude = player(1, 4, "blue")
-print(dude.player_num, dude.num_players, dude.points, dude.cards, dude.guess, dude.knowns)
-if dude.peek_decision(True):
-    dude.get_peek(4, True)
-print(dude.cards, dude.guess, dude.knowns)
-print(dude.peek_decision(False))
+# dude = player(1, 4, "blue")
+# print(dude.player_num, dude.num_players, dude.points, dude.cards, dude.guess, dude.knowns)
+# if dude.peek_decision(True):
+#     dude.get_peek(4, True)
+# print(dude.cards, dude.guess, dude.knowns)
+# dude.cards.append("peek")
+# dude.knowns.clear()
+# print(dude.cards)
+# print(dude.peek_decision(True))
+# print(dude.cards)

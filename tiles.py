@@ -46,8 +46,3 @@ class tiles():
                 self.c_size -= 1
 
         return result
-
-hi = tiles()
-print(hi.new_tile(5))
-print(hi.new_tile(3))
-print(hi.new_tile(30))
