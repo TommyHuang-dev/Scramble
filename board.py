@@ -9,9 +9,10 @@ import random
 
 # TILES CLASS
 # functions: get a new tile
-class tiles():
+class board():
     def __init__(self):
         self.deck = []
+        self.curBoard = []
 
         self.c_size = 0  # current length
 
@@ -29,7 +30,7 @@ class tiles():
 
     # returns a random list of tiles equal to length num and then subtracts them from the other list
     # the ORDER of return is from 0th list index to nth list index
-    def new_tile(self, num):
+    def new_tiles(self, num):
         result = []
         for i in range(num):
             if self.o_size == self.c_size + 1:  # start tile
@@ -45,4 +46,5 @@ class tiles():
 
                 self.c_size -= 1
 
-        return result
+        self.curBoard += result
+
