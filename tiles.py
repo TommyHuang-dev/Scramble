@@ -41,7 +41,7 @@ class tiles():
             else:  # random tile
                 choice = random.randrange(0, len(self.deck))
                 result.append(self.deck[choice].copy())
-                del(self.deck[choice])
+                del self.deck[choice]
 
                 self.c_size -= 1
 
